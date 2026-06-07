@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useCallback, useState } from 'react';
-import { X, ExternalLink, LayoutGrid, ChevronRight, RotateCcw } from 'lucide-react';
+import { X, ExternalLink, LayoutGrid, ChevronRight, RotateCcw, Image as ImageIcon } from 'lucide-react';
 import { MODAL_QUIZ, PORTFOLIO_ROUTES } from '../config';
 
 const portfolioList = Object.values(PORTFOLIO_ROUTES);
@@ -50,7 +50,7 @@ function ProgressDots({ total, current }) {
 }
 
 // ─── Main modal component ─────────────────────────────────────────────────────
-export default function PortfolioQuizModal({ isOpen, onClose }) {
+export default function PortfolioQuizModal({ isOpen, onClose, onViewDiagrams }) {
   const [step, setStep] = useState('quiz'); // 'quiz' | 'result'
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -219,6 +219,14 @@ export default function PortfolioQuizModal({ isOpen, onClose }) {
                   >
                     <LayoutGrid size={16} /> View all five portfolios
                   </button>
+                  {onViewDiagrams && (
+                    <button
+                      className="qm-diag-nudge"
+                      onClick={() => { onClose(); onViewDiagrams(); }}
+                    >
+                      <ImageIcon size={13} /> Want to understand the architecture first? View Architecture Diagrams
+                    </button>
+                  )}
                 </>
               ) : (
                 // All-portfolios fallback (tied/zero score)
