@@ -1,0 +1,13 @@
+{
+  "name": "4P3X Verse Gateway",
+  "short_name": "4P3X Gateway",
+  "description": "AI-guided portfolio router for the five 4P3X Verse portfolio paths.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050507",
+  "theme_color": "#050507",
+  "icons": [
+    { "src": "/logos/box-logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logos/box-logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

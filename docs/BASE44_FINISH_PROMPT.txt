@@ -1,0 +1,140 @@
+⛔ STRICT BASE44 / MANUS / SUPER AGENT ENFORCEMENT RULES — READ FIRST
+
+MODE:
+FIX-ONLY BUILD COMPILER MODE
+VITE BUILD FINAL ASSEMBLY + LOGO INTEGRATION + RESPONSIVE QA ONLY
+NO FULL REBUILD
+NO DESTRUCTIVE REFACTOR
+NO FEATURE DRIFT
+NO DUPLICATE ROUTES
+NO SIXTH PORTFOLIO ROUTE
+NO DUPLICATE COMPONENT SYSTEMS
+NO BREAKING QUIZ ROUTING
+NO BREAKING EMBEDDED AI GUIDE
+NO BREAKING LIVE PORTFOLIO LINKS
+NO BREAKING PWA MANIFEST OR SERVICE WORKER
+NO HARDCODED SECRETS
+NO BACKEND-ONLY KEYS IN FRONTEND
+NO FAKE COMPLETION CLAIMS
+STOP IF REQUIRED FILES ARE MISSING
+
+PROJECT:
+4P3X Verse™ Gateway — Five Portfolio Router
+Powered by 4P3X Intelligent AI™ Created by Kyzel Kreates™
+
+CURRENT STATUS:
+A Vite + React static PWA gateway has been assembled. It already contains the five live portfolio URLs, score-based onboarding quiz, embedded local-first 4P3X Portfolio Guide™ AI, PWA manifest, service worker, responsive futuristic UI, and documentation.
+
+MISSION:
+Finish and polish the existing Vite project without changing the architecture. Add the two uploaded logo images, validate the five live portfolio routes, run the Vite build, perform responsive QA, and prepare the project for deployment.
+
+EXACT FIVE PORTFOLIO ROUTES — DO NOT CHANGE OR ADD TO THIS LIST:
+1. Investor Portfolio
+   https://4p3xaiinvestorportfolio.vercel.app
+2. Strategic Partner Portfolio
+   https://4p3xpartnerportfolio.vercel.app
+3. Hire / Contract Portfolio
+   https://4p3xcontractportfolio.vercel.app
+4. Grant / Public Benefit Portfolio
+   https://4p3x-grantportfolio.vercel.app
+5. Technical Architecture Portfolio
+   https://4p3xtechportfolio.vercel.app
+
+IMPORTANT:
+The Live Products section is supporting evidence only. It must not be treated as a sixth portfolio route.
+
+FILES / FOLDERS TO PRESERVE:
+index.html
+package.json
+src/config.js
+src/main.jsx
+src/styles.css
+public/manifest.webmanifest
+public/sw.js
+docs/ASSEMBLY_INSTRUCTIONS.md
+docs/BASE44_FINISH_PROMPT.txt
+
+ALLOWED TO TOUCH:
+- public/logos/landscape-logo.png
+- public/logos/box-logo.png
+- src/styles.css for responsive/polish fixes only
+- src/main.jsx for safe UI rendering fixes only
+- src/config.js only if correcting labels/copy while preserving exactly five portfolio routes
+- public/manifest.webmanifest only to ensure icon paths work
+
+DO NOT TOUCH:
+- Do not add another portfolio route.
+- Do not remove any of the five live portfolio URLs.
+- Do not replace the router with a different architecture.
+- Do not remove the onboarding quiz.
+- Do not remove the embedded AI guide.
+- Do not remove PWA files.
+- Do not add auth.
+- Do not add paid API requirements.
+- Do not expose backend-only secrets.
+- Do not claim real users, revenue, customers, or investment unless explicitly provided.
+
+LOGO INSTRUCTIONS:
+The user will upload two logos:
+1. Landscape / wide logo
+2. Box / square logo
+
+Save them as:
+public/logos/landscape-logo.png
+public/logos/box-logo.png
+
+Then make sure the gateway visually uses them in the hero/logo areas and the PWA manifest uses the box logo.
+
+IMPLEMENTATION REQUIREMENTS:
+- Keep the app as a Vite React project.
+- Keep the branding line: Powered by 4P3X Intelligent AI™ Created by Kyzel Kreates™.
+- Keep the main title: 4P3X Verse™ Gateway.
+- Keep the visual identity: black background, metallic gold, metallic silver, green, purple, futuristic accents.
+- Keep quiz logic score-based and local-first.
+- Keep AI guide local-first unless a safe backend is explicitly configured later.
+- Keep all five portfolio buttons opening live URLs in a new tab.
+- Make navigation mobile responsive.
+- Make cards align cleanly on desktop, tablet, and mobile.
+- Add graceful fallback if logo images are not loaded.
+- Preserve PWA installability.
+
+VALIDATION GATES BEFORE COMPLETION:
+1. Run npm install.
+2. Run npm run build.
+3. Confirm Vite build passes.
+4. Open preview and test homepage.
+5. Test all five portfolio links.
+6. Test quiz route for each audience type.
+7. Test embedded AI with these prompts:
+   - Which portfolio is best for investors?
+   - Which portfolio is best for a partner?
+   - Which portfolio is best if someone wants to hire me?
+   - Which portfolio is best for grants?
+   - Which portfolio is best for technical people?
+8. Test mobile layout at 320px, 375px, 414px, 768px, 1024px, 1440px.
+9. Confirm no sixth portfolio route exists.
+10. Confirm Live Products section is labelled as supporting evidence only.
+11. Confirm no secrets or backend-only keys are present.
+12. Confirm service worker and manifest remain valid.
+
+ROLLBACK:
+If any change breaks routing, quiz, AI guide, PWA setup, or the five portfolio links, revert only the last change and preserve the original working files.
+
+STOP CONDITIONS:
+Stop and report if:
+- package.json is missing.
+- src/config.js is missing.
+- src/main.jsx is missing.
+- Any of the five live URLs cannot be preserved.
+- A requested change requires adding a sixth portfolio route.
+- A backend secret/API key is requested for frontend code.
+
+FINAL OUTPUT REQUIRED:
+- Confirm build passed.
+- Confirm all five live portfolio links tested.
+- Confirm mobile responsive checks completed.
+- Confirm no sixth route was added.
+- Confirm logos were integrated.
+- Provide deployment notes only after validation passes.
+
+Directive 1: Adapt the skill set to the task. Include full folder structure, program code, logic code, transition code, UI logic, UI code, and HTML/JSX where required. Preserve SSOT, prevent feature creep, and protect working systems.
