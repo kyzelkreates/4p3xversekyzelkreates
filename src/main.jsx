@@ -1,30 +1,18 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   ArrowRight, BriefcaseBusiness, Building2, CheckCircle2,
-  Compass, Cpu, ExternalLink, Handshake, Landmark,
+  Cpu, ExternalLink, Handshake, Landmark,
   Menu, Rocket, Sparkles, X, LayoutGrid
 } from 'lucide-react';
-import { BRAND, PORTFOLIO_ROUTES, QUIZ, LIVE_PRODUCTS } from './config';
+import { BRAND, PORTFOLIO_ROUTES, LIVE_PRODUCTS } from './config';
 import PortfolioQuizModal from './components/PortfolioQuizModal';
 import TimelineSection from './components/TimelineSection';
 import './styles.css';
 
 const portfolioList = Object.values(PORTFOLIO_ROUTES);
 
-// ─── Legacy inline quiz scoring (existing quiz section preserved) ─────────────
-function scoreAnswers(answers) {
-  const scores = Object.fromEntries(portfolioList.map(p => [p.id, 0]));
-  Object.values(answers).forEach(option => {
-    Object.entries(option?.scores || {}).forEach(([id, value]) => {
-      scores[id] = (scores[id] || 0) + value;
-    });
-  });
-  const winnerId = Object.entries(scores).sort((a, b) => b[1] - a[1])[0]?.[0] || 'investor';
-  return { scores, winner: PORTFOLIO_ROUTES[winnerId] };
-}
-
-// ─── Local AI guide (preserved) ───────────────────────────────────────────────
+// ─── Local AI guide ────────────────────────────────────────────────────────────
 function askLocalAI(input) {
   const text = input.toLowerCase();
   const direct = portfolioList.find(p => p.routeLogic.some(term => text.includes(term)));
@@ -74,14 +62,10 @@ function PortfolioCard({ portfolio }) {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [quizOpen, setQuizOpen] = useState(false);
-  const [answers, setAnswers] = useState({});
   const [aiInput, setAiInput] = useState('');
   const [aiMessages, setAiMessages] = useState([
     { role: 'ai', text: 'Welcome. I can route visitors to the right 4P3X Verse™ portfolio and explain the ecosystem in clear language.' }
   ]);
-
-  const result = useMemo(() => scoreAnswers(answers), [answers]);
-  const completed = Object.keys(answers).length === QUIZ.length;
 
   const askAI = () => {
     if (!aiInput.trim()) return;
@@ -90,7 +74,7 @@ function App() {
     setAiInput('');
   };
 
-  const openQuiz = () => setQuizOpen(true);
+  const openQuiz  = () => setQuizOpen(true);
   const closeQuiz = () => setQuizOpen(false);
 
   return (
@@ -117,7 +101,6 @@ function App() {
             {menuOpen ? <X /> : <Menu />}
           </button>
           <nav className={menuOpen ? 'open' : ''}>
-            <a href="#quiz"       onClick={() => setMenuOpen(false)}>Quiz</a>
             <a href="#guide"      onClick={() => setMenuOpen(false)}>AI Guide</a>
             <a href="#timeline"   onClick={() => setMenuOpen(false)}>Timeline</a>
             <a href="#portfolios" onClick={() => setMenuOpen(false)}>5 Portfolios</a>
@@ -137,7 +120,6 @@ function App() {
               <h1>Welcome to the 4P3X Verse™ Gateway</h1>
               <h2>{BRAND.headline}</h2>
 
-              {/* Short positioning statement */}
               <p className="positioning-short">{BRAND.shortPositioning}</p>
 
               <p className="quiz-nudge">Not sure where to start? Use the pop-up portfolio guide and it will route you to the right version.</p>
@@ -194,47 +176,7 @@ function App() {
           </div>
         </section>
 
-        {/* ── Inline Quiz (preserved) ── */}
-        <section id="quiz" className="section quizSection">
-          <div className="sectionHead">
-            <p className="eyebrow">Onboarding quiz</p>
-            <h2>Route every visitor to the strongest portfolio for their purpose.</h2>
-          </div>
-          <div className="quizGrid">
-            <div className="questions">
-              {QUIZ.map((q, index) => (
-                <article className="questionCard" key={q.id}>
-                  <h3>{index + 1}. {q.question}</h3>
-                  <div className="options">
-                    {q.options.map(option => (
-                      <button
-                        key={option.label}
-                        className={answers[q.id]?.label === option.label ? 'selected' : ''}
-                        onClick={() => setAnswers({ ...answers, [q.id]: option })}
-                      >
-                        {option.label}
-                      </button>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-            <aside className="resultCard">
-              <Compass size={34}/>
-              <p className="eyebrow">Recommended route</p>
-              <h3>{completed ? result.winner.title : 'Answer the quiz to generate a route'}</h3>
-              <p>{completed ? result.winner.summary : 'The gateway scores each answer and points visitors to Investor, Partner, Contract/Hire, Grant, or Technical.'}</p>
-              {completed && (
-                <a className="primary full" href={result.winner.url} target="_blank" rel="noreferrer">
-                  Open {result.winner.title} <ExternalLink size={16}/>
-                </a>
-              )}
-              <button className="secondary full" onClick={() => setAnswers({})}>Reset quiz</button>
-            </aside>
-          </div>
-        </section>
-
-        {/* ── AI Guide (preserved) ── */}
+        {/* ── AI Guide ── */}
         <section id="guide" className="section aiSection">
           <div className="sectionHead">
             <p className="eyebrow">Embedded AI</p>
