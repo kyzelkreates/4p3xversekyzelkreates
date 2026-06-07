@@ -1,33 +1,70 @@
-:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:#f7f4e9;background:#050507;line-height:1.5;--gold:#d9b45f;--silver:#d8d8df;--green:#5df1a4;--purple:#9f6bff;--panel:rgba(255,255,255,.07);--line:rgba(255,255,255,.16)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0%,rgba(159,107,255,.24),transparent 32%),radial-gradient(circle at 90% 8%,rgba(93,241,164,.16),transparent 30%),linear-gradient(145deg,#050507,#101014 55%,#07070a);color:#f7f4e9}a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 5vw;background:rgba(5,5,7,.76);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px}.brandMark,.cardIcon{display:grid;place-items:center;border:1px solid rgba(217,180,95,.5);background:linear-gradient(135deg,rgba(217,180,95,.2),rgba(159,107,255,.16));border-radius:16px;color:var(--gold);width:46px;height:46px}.brand span{display:block;color:#b9b8c3;font-size:12px}nav{display:flex;gap:18px;color:#d9d6df;font-size:14px}.menuButton{display:none;background:transparent;color:white;border:0}.section{padding:88px 5vw;position:relative}.hero{min-height:88vh;display:flex;align-items:center;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;width:100%}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--green);font-weight:800}h1{font-size:clamp(44px,8vw,94px);line-height:.9;margin:12px 0;background:linear-gradient(90deg,#fff,var(--gold),var(--silver),var(--purple));-webkit-background-clip:text;color:transparent}h2{font-size:clamp(28px,4vw,54px);line-height:1.02;margin:0 0 18px}h3{font-size:24px;margin:8px 0 12px}.lead{font-size:20px;color:#d5d3db;max-width:760px}.ctaRow,.proofStrip{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}.primary,.secondary,.chatInput button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 18px;font-weight:800;border:1px solid rgba(217,180,95,.5)}.primary{background:linear-gradient(135deg,var(--gold),#f3e4a6);color:#111}.secondary{background:rgba(255,255,255,.06);color:white}.full{width:100%;margin-top:12px}.proofStrip span{display:flex;align-items:center;gap:8px;color:#d7d4df;font-size:14px}.heroPanel,.questionCard,.resultCard,.chatShell,.portfolioCard,.finish{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.04));border-radius:28px;box-shadow:0 20px 80px rgba(0,0,0,.35);padding:24px}.logoSlot{border:1px dashed rgba(217,180,95,.6);border-radius:22px;display:grid;place-items:center;text-align:center;color:#d8c48f;background:rgba(217,180,95,.08)}.wide{height:130px}.box{width:110px;height:110px;margin:18px auto 0}.routeStack{display:grid;gap:10px;margin:18px 0}.routeStack a,.productGrid a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px;border:1px solid var(--line);border-radius:16px;background:rgba(0,0,0,.25)}.routeStack span{color:var(--green);font-weight:900}.orb{position:absolute;border-radius:50%;filter:blur(35px);opacity:.6}.orbA{width:260px;height:260px;background:var(--purple);right:12%;top:15%}.orbB{width:180px;height:180px;background:var(--green);left:8%;bottom:8%}.sectionHead{max-width:850px;margin-bottom:28px}.quizGrid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px}.questions{display:grid;gap:18px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.options button{border:1px solid var(--line);border-radius:16px;padding:13px;background:rgba(255,255,255,.05);color:white;text-align:left;cursor:pointer}.options button.selected{border-color:var(--green);box-shadow:0 0 0 2px rgba(93,241,164,.16);background:rgba(93,241,164,.12)}.resultCard{position:sticky;top:92px;height:max-content}.aiSection{background:rgba(255,255,255,.025)}.messages{display:grid;gap:12px;max-height:360px;overflow:auto;padding:6px}.message{padding:14px 16px;border-radius:18px;max-width:86%}.message.ai{background:rgba(159,107,255,.16);border:1px solid rgba(159,107,255,.35)}.message.user{background:rgba(93,241,164,.12);border:1px solid rgba(93,241,164,.35);margin-left:auto}.chatInput{display:flex;gap:10px;margin-top:16px}.chatInput input{flex:1;border:1px solid var(--line);border-radius:999px;background:rgba(0,0,0,.3);color:white;padding:14px 16px}.portfolioGrid{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr));gap:18px}.portfolioCard{display:flex;flex-direction:column}.portfolioCard p{color:#d3d0dc}.audience{color:#f0e3bd!important}.badge{align-self:flex-start;border:1px solid rgba(93,241,164,.4);color:var(--green);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900;margin:14px 0 6px}.portfolioCard ul{padding:0;list-style:none;display:grid;gap:8px;margin:auto 0 14px}.portfolioCard li{display:flex;gap:8px;color:#d9d6df;font-size:14px}.productGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.finish{text-align:center;margin:0 5vw 70px}@media(max-width:1150px){.portfolioGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.heroGrid,.quizGrid{grid-template-columns:1fr}.resultCard{position:static}}@media(max-width:720px){.section{padding:62px 20px}.hero{min-height:auto}.menuButton{display:block}nav{display:none;position:absolute;top:79px;left:0;right:0;flex-direction:column;background:#08080b;padding:18px 5vw;border-bottom:1px solid var(--line)}nav.open{display:flex}.options,.portfolioGrid,.productGrid{grid-template-columns:1fr}.chatInput{flex-direction:column}h1{font-size:48px}.lead{font-size:17px}.nav{padding:14px 20px}.brand span{display:none}}
-
-/* ── Logo image overrides ── */
-.navBoxLogo{width:46px;height:46px;object-fit:contain;border:1px solid rgba(217,180,95,.5);background:linear-gradient(135deg,rgba(217,180,95,.2),rgba(159,107,255,.16));border-radius:16px}
-.landscapeLogoWrap{overflow:hidden;padding:10px}
-.landscapeLogoImg{width:100%;height:100%;object-fit:contain;display:block}
-.boxLogoWrap{overflow:hidden;padding:8px}
-.boxLogoImg{width:100%;height:100%;object-fit:contain;display:block}
-.logoFallback{display:grid;place-items:center;text-align:center;color:var(--gold);font-size:13px;padding:8px;width:100%;height:100%}
-
-/* ── Extra responsive polish ── */
-@media(max-width:480px){.heroGrid{gap:28px}.heroPanel{padding:16px}.routeStack a{padding:10px 12px;font-size:13px}.ctaRow{flex-direction:column}.primary,.secondary{width:100%;justify-content:center}.proofStrip{flex-direction:column;gap:8px}.quizGrid{grid-template-columns:1fr}.options{grid-template-columns:1fr}}
-@media(max-width:320px){h1{font-size:36px}h2{font-size:22px}.lead{font-size:15px}}
-
 /* ═══════════════════════════════════════════════════════════════════════════
-   UPGRADE STYLES — Timeline, Positioning, Modal, Polish
-   4P3X Verse™ · Powered by 4P3X Intelligent AI™ · Created by Kyzel Kreates™
+   4P3X Verse™ Gateway — Styles
+   Powered by 4P3X Intelligent AI™  ·  Created by Kyzel Kreates™
    ═══════════════════════════════════════════════════════════════════════════ */
 
-/* ── Logo image overrides ──────────────────────────────────────────────────── */
-.navBoxLogo{width:46px;height:46px;object-fit:contain;border:1px solid rgba(217,180,95,.5);background:linear-gradient(135deg,rgba(217,180,95,.2),rgba(159,107,255,.16));border-radius:16px}
-.landscapeLogoWrap{overflow:hidden;padding:10px}
-.landscapeLogoImg{width:100%;height:100%;object-fit:contain;display:block}
-.boxLogoWrap{overflow:hidden;padding:8px}
-.boxLogoImg{width:100%;height:100%;object-fit:contain;display:block}
-.logoFallback{display:grid;place-items:center;text-align:center;color:var(--gold);font-size:13px;padding:8px;width:100%;height:100%}
+/* ── Tokens & reset ──────────────────────────────────────────────────────── */
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:#f7f4e9;background:#050507;line-height:1.5;--gold:#d9b45f;--silver:#d8d8df;--green:#5df1a4;--purple:#9f6bff;--panel:rgba(255,255,255,.07);--line:rgba(255,255,255,.16)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 10% 0%,rgba(159,107,255,.24),transparent 32%),radial-gradient(circle at 90% 8%,rgba(93,241,164,.16),transparent 30%),linear-gradient(145deg,#050507,#101014 55%,#07070a);color:#f7f4e9}
+a{color:inherit;text-decoration:none}
+
+/* ── Navigation ──────────────────────────────────────────────────────────── */
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 5vw;background:rgba(5,5,7,.76);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand span{display:block;color:#b9b8c3;font-size:12px}
+.cardIcon{display:grid;place-items:center;border:1px solid rgba(217,180,95,.5);background:linear-gradient(135deg,rgba(217,180,95,.2),rgba(159,107,255,.16));border-radius:16px;color:var(--gold);width:46px;height:46px}
+nav{display:flex;gap:18px;color:#d9d6df;font-size:14px;align-items:center}
+.menuButton{display:none;background:transparent;color:white;border:0}
 
 /* ── Nav quiz button ─────────────────────────────────────────────────────── */
 .nav-quiz-btn{background:linear-gradient(135deg,var(--gold),#f3e4a6);color:#111;border:none;border-radius:999px;padding:9px 16px;font-weight:800;font-size:13px;cursor:pointer;white-space:nowrap}
 .nav-quiz-btn:hover{opacity:.9}
+
+/* ── Typography ──────────────────────────────────────────────────────────── */
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--green);font-weight:800}
+h1{font-size:clamp(44px,8vw,94px);line-height:.9;margin:12px 0;background:linear-gradient(90deg,#fff,var(--gold),var(--silver),var(--purple));-webkit-background-clip:text;color:transparent}
+h2{font-size:clamp(28px,4vw,54px);line-height:1.02;margin:0 0 18px}
+h3{font-size:24px;margin:8px 0 12px}
+
+/* ── Sections ────────────────────────────────────────────────────────────── */
+.section{padding:88px 5vw;position:relative}
+.sectionHead{max-width:850px;margin-bottom:28px}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.primary,.secondary,.chatInput button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 18px;font-weight:800;border:1px solid rgba(217,180,95,.5)}
+.primary{background:linear-gradient(135deg,var(--gold),#f3e4a6);color:#111}
+.secondary{background:rgba(255,255,255,.06);color:white}
+.full{width:100%;margin-top:12px}
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+.hero{min-height:88vh;display:flex;align-items:center;overflow:hidden}
+.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;width:100%}
+.ctaRow,.proofStrip{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.proofStrip span{display:flex;align-items:center;gap:8px;color:#d7d4df;font-size:14px}
+
+/* ── Hero panel ──────────────────────────────────────────────────────────── */
+.heroPanel,.chatShell,.portfolioCard{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.04));border-radius:28px;box-shadow:0 20px 80px rgba(0,0,0,.35);padding:24px}
+.logoSlot{border:1px dashed rgba(217,180,95,.6);border-radius:22px;display:grid;place-items:center;text-align:center;color:#d8c48f;background:rgba(217,180,95,.08)}
+.wide{height:130px}
+.box{width:110px;height:110px;margin:18px auto 0}
+.routeStack{display:grid;gap:10px;margin:18px 0}
+.routeStack a,.productGrid a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px;border:1px solid var(--line);border-radius:16px;background:rgba(0,0,0,.25)}
+.routeStack span{color:var(--green);font-weight:900}
+
+/* ── Orbs ────────────────────────────────────────────────────────────────── */
+.orb{position:absolute;border-radius:50%;filter:blur(35px);opacity:.6}
+.orbA{width:260px;height:260px;background:var(--purple);right:12%;top:15%}
+.orbB{width:180px;height:180px;background:var(--green);left:8%;bottom:8%}
+
+/* ── Logo image overrides ────────────────────────────────────────────────── */
+.navBoxLogo{width:46px;height:46px;object-fit:contain;border:1px solid rgba(217,180,95,.5);background:linear-gradient(135deg,rgba(217,180,95,.2),rgba(159,107,255,.16));border-radius:16px}
+.landscapeLogoWrap{overflow:hidden;padding:10px}
+.landscapeLogoImg{width:100%;height:100%;object-fit:contain;display:block}
+.boxLogoWrap{overflow:hidden;padding:8px}
+.boxLogoImg{width:100%;height:100%;object-fit:contain;display:block}
+.logoFallback{display:grid;place-items:center;text-align:center;color:var(--gold);font-size:13px;padding:8px;width:100%;height:100%}
 
 /* ── Positioning section ─────────────────────────────────────────────────── */
 .positioningSection{padding-top:0}
@@ -36,12 +73,14 @@
 .positioning-card{border:1px solid rgba(217,180,95,.25);background:linear-gradient(135deg,rgba(217,180,95,.06),rgba(159,107,255,.06));border-radius:22px;padding:32px 36px;max-width:960px;margin:0 auto}
 .positioning-full{font-size:17px;color:#d5d3db;line-height:1.75;margin:14px 0 0}
 
-/* ── Portfolio card live label ────────────────────────────────────────────── */
-.pc-live-label{display:flex;align-items:center;gap:6px;color:var(--green);font-size:12px;font-weight:700;margin:0 0 4px}
-
-/* ── Portfolios quiz CTA ─────────────────────────────────────────────────── */
-.portfolios-quiz-cta{text-align:center;margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:14px}
-.portfolios-quiz-cta p{color:#9f9db0;font-size:15px;margin:0}
+/* ── AI Guide section ────────────────────────────────────────────────────── */
+.aiSection{background:rgba(255,255,255,.025)}
+.messages{display:grid;gap:12px;max-height:360px;overflow:auto;padding:6px}
+.message{padding:14px 16px;border-radius:18px;max-width:86%}
+.message.ai{background:rgba(159,107,255,.16);border:1px solid rgba(159,107,255,.35)}
+.message.user{background:rgba(93,241,164,.12);border:1px solid rgba(93,241,164,.35);margin-left:auto}
+.chatInput{display:flex;gap:10px;margin-top:16px}
+.chatInput input{flex:1;border:1px solid var(--line);border-radius:999px;background:rgba(0,0,0,.3);color:white;padding:14px 16px}
 
 /* ── Timeline section ────────────────────────────────────────────────────── */
 .timelineSection{background:rgba(255,255,255,.018)}
@@ -61,22 +100,34 @@
 .tl-bases{font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--gold),var(--silver));-webkit-background-clip:text;color:transparent;line-height:1.1}
 .tl-label{font-size:13px;font-weight:700;color:var(--silver);text-transform:uppercase;letter-spacing:.12em}
 .tl-desc{font-size:14px;color:#c8c6d4;line-height:1.65;margin:4px 0 0}
-.tl-connector{display:none}
 .tl-closing{text-align:center;margin-top:44px;padding:32px;border:1px solid rgba(217,180,95,.2);border-radius:22px;background:rgba(217,180,95,.04)}
 .tl-closing p{font-size:20px;color:#f7f4e9;margin:0 0 20px;line-height:1.6}
 .tl-brand-line{font-size:14px;color:#9f9db0}
 .tl-quiz-cta{margin-top:4px}
 
-/* ── Quiz Modal Backdrop ──────────────────────────────────────────────────── */
+/* ── Portfolio cards ─────────────────────────────────────────────────────── */
+.portfolioGrid{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr));gap:18px}
+.portfolioCard{display:flex;flex-direction:column}
+.portfolioCard p{color:#d3d0dc}
+.audience{color:#f0e3bd!important}
+.badge{align-self:flex-start;border:1px solid rgba(93,241,164,.4);color:var(--green);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900;margin:14px 0 6px}
+.pc-live-label{display:flex;align-items:center;gap:6px;color:var(--green);font-size:12px;font-weight:700;margin:0 0 4px}
+.portfolioCard ul{padding:0;list-style:none;display:grid;gap:8px;margin:auto 0 14px}
+.portfolioCard li{display:flex;gap:8px;color:#d9d6df;font-size:14px}
+.portfolios-quiz-cta{text-align:center;margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.portfolios-quiz-cta p{color:#9f9db0;font-size:15px;margin:0}
+
+/* ── Live products ───────────────────────────────────────────────────────── */
+.productGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   POP-UP QUIZ MODAL
+   ═══════════════════════════════════════════════════════════════════════════ */
 .qm-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(2,2,5,.82);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:16px;animation:qm-fade-in .18s ease}
 @keyframes qm-fade-in{from{opacity:0}to{opacity:1}}
-
-/* ── Quiz Modal Box ─────────────────────────────────────────────────────── */
 .qm-modal{background:linear-gradient(160deg,#0e0e12,#12121a);border:1px solid rgba(217,180,95,.35);border-radius:28px;box-shadow:0 0 0 1px rgba(217,180,95,.1),0 40px 120px rgba(0,0,0,.7);width:100%;max-width:640px;max-height:90vh;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;animation:qm-slide-in .22s ease}
 @keyframes qm-slide-in{from{transform:translateY(24px);opacity:0}to{transform:translateY(0);opacity:1}}
 .qm-modal:focus{outline:none}
-
-/* ── Modal Header ───────────────────────────────────────────────────────── */
 .qm-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:28px 28px 20px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(217,180,95,.07),transparent)}
 .qm-header-text{flex:1}
 .qm-eyebrow{color:var(--green) !important;margin:0 0 8px}
@@ -85,21 +136,13 @@
 .qm-close{background:rgba(255,255,255,.08);border:1px solid var(--line);color:white;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;flex-shrink:0;transition:background .15s}
 .qm-close:hover{background:rgba(255,255,255,.16)}
 .qm-close:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-
-/* ── Modal Body ─────────────────────────────────────────────────────────── */
 .qm-body{padding:24px 28px 28px;display:flex;flex-direction:column;gap:20px}
-
-/* ── Progress dots ──────────────────────────────────────────────────────── */
 .qm-progress{display:flex;gap:8px;align-items:center}
 .qm-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);transition:all .2s}
 .qm-dot.active{background:var(--gold);border-color:var(--gold);box-shadow:0 0 8px rgba(217,180,95,.5)}
 .qm-dot.done{background:var(--green);border-color:var(--green)}
 .qm-qcount{font-size:12px;color:#9f9db0;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
-
-/* ── Question ───────────────────────────────────────────────────────────── */
 .qm-question{font-size:clamp(16px,3vw,20px);margin:0;line-height:1.35;color:#f7f4e9}
-
-/* ── Options ────────────────────────────────────────────────────────────── */
 .qm-options{display:flex;flex-direction:column;gap:10px}
 .qm-option{display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);color:white;text-align:left;cursor:pointer;transition:all .15s;font-size:14px;line-height:1.45}
 .qm-option:hover{border-color:rgba(217,180,95,.5);background:rgba(217,180,95,.08)}
@@ -109,13 +152,9 @@
 .qm-option-text{flex:1}
 .qm-option-arrow{flex-shrink:0;opacity:.4;transition:opacity .15s}
 .qm-option:hover .qm-option-arrow{opacity:.9}
-
-/* ── Nav (back) ─────────────────────────────────────────────────────────── */
 .qm-nav{display:flex;justify-content:flex-start}
 .qm-back{background:transparent;border:1px solid var(--line);color:#b9b8c3;border-radius:999px;padding:8px 16px;font-size:13px;cursor:pointer;transition:all .15s}
 .qm-back:hover{border-color:var(--gold);color:var(--gold)}
-
-/* ── Result ─────────────────────────────────────────────────────────────── */
 .qm-result{display:flex;flex-direction:column;gap:16px}
 .qm-result-badge{align-self:flex-start;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;background:rgba(217,180,95,.15);border:1px solid rgba(217,180,95,.4);color:var(--gold)}
 .qm-result-badge.all{background:rgba(159,107,255,.15);border-color:rgba(159,107,255,.4);color:var(--purple)}
@@ -124,19 +163,18 @@
 .qm-cta{gap:9px;font-size:15px}
 .qm-retake{background:transparent;border:none;color:#7a79a0;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;padding:0;align-self:flex-start;margin-top:4px;transition:color .15s}
 .qm-retake:hover{color:var(--silver)}
-
-/* ── All portfolios grid ─────────────────────────────────────────────────── */
 .qm-all-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .qm-all-card{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.05);color:white;font-size:13px;font-weight:700;transition:all .15s}
 .qm-all-card:hover{border-color:var(--gold);background:rgba(217,180,95,.08)}
 .qm-all-title{color:var(--silver)}
 
-/* ── Extra responsive polish ─────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════════════ */
 @media(max-width:1150px){
-  .tl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .portfolioGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .heroGrid,.quizGrid{grid-template-columns:1fr}
-  .resultCard{position:static}
+  .heroGrid{grid-template-columns:1fr}
+  .tl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:768px){
   .tl-grid{grid-template-columns:1fr}
@@ -150,10 +188,9 @@
   .menuButton{display:block}
   nav{display:none;position:absolute;top:79px;left:0;right:0;flex-direction:column;background:#08080b;padding:18px 5vw;border-bottom:1px solid var(--line)}
   nav.open{display:flex}
-  .options,.portfolioGrid,.productGrid{grid-template-columns:1fr}
+  .portfolioGrid,.productGrid{grid-template-columns:1fr}
   .chatInput{flex-direction:column}
   h1{font-size:48px}
-  .lead{font-size:17px}
   .nav{padding:14px 20px}
   .brand span{display:none}
   .qm-modal{max-height:100vh;border-radius:22px}
@@ -167,8 +204,6 @@
   .ctaRow{flex-direction:column}
   .primary,.secondary{width:100%;justify-content:center}
   .proofStrip{flex-direction:column;gap:8px}
-  .quizGrid{grid-template-columns:1fr}
-  .options{grid-template-columns:1fr}
   .qm-all-grid{grid-template-columns:1fr}
   .qm-option{padding:12px 14px}
   .tl-bases{font-size:22px}
@@ -176,6 +211,5 @@
 @media(max-width:320px){
   h1{font-size:36px}
   h2{font-size:22px}
-  .lead{font-size:15px}
   .qm-header h2{font-size:16px}
 }
