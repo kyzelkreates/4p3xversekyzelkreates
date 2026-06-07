@@ -12,43 +12,66 @@ import TimelineSection from './components/TimelineSection';
 import DiagramFeatureSection from './components/DiagramFeatureSection';
 import DiagramLightbox from './components/DiagramLightbox';
 import ArchitectureDiagrams from './components/ArchitectureDiagrams';
+import ModularBaseExpansion from './components/ModularBaseExpansion';
 import './styles.css';
 
 const portfolioList = Object.values(PORTFOLIO_ROUTES);
 
-// ─── Local AI guide ────────────────────────────────────────────────────────────
+// ─── Local AI guide (diagram + modular base expansion aware) ─────────────────
 function askLocalAI(input) {
   const text = input.toLowerCase();
 
+  // Modular base system questions
+  if (text.includes('modular base') || text.includes('base system') || text.includes('base library') || text.includes('100 base') || text.includes('50 base') || text.includes('20 base') || text.includes('10 base') || text.includes('5 base')) {
+    return `The 4P3X Verse™ has a growing library of separate reusable base-system foundations — not one app getting bigger. Each base is a distinct reusable foundation with its own dashboard structures, workflows, PWA logic, AI guidance layers, and data models. The roadmap grows from 1 core base (V1, live now) to 5 (V2), 10 (V3), 20 (V4), 50 (V5), and 100 (V6) separate base-system libraries. Scroll down the portfolios section to see the full Modular Base-System Expansion Model.`;
+  }
+  if (text.includes('modular product assembly') || text.includes('assembly engine') || text.includes('client platform') || text.includes('how does 4p3x build') || text.includes('how it builds')) {
+    return `4P3X Verse™ is a Modular Product Assembly Ecosystem™. When a client needs a platform, it does not start from a blank screen. Instead: (1) Map the client's needs, (2) AI identifies the most relevant base systems, (3) Select the best-fit bases from the library, (4) Assemble the strongest components, (5) Refactor for the client's sector, (6) Deliver an installable demo, (7) Move to live with a real backend. Each portfolio section shows a full "How It Works" flow.`;
+  }
+  if (text.includes('one app') || text.includes('separate') || text.includes('different bases') || text.includes('are they one')) {
+    return `The base versions are separate reusable system libraries — not one single app getting bigger. Each base can contain different dashboard logic, workflows, PWA structures, AI guidance patterns, data models and sector-ready layouts. The platform selects, combines and refactors the strongest parts from the right bases to create a tailored client platform.`;
+  }
+  if (text.includes('what is 4p3x') || text.includes('what is the 4p3x') || text.includes('explain 4p3x')) {
+    return `4P3X Verse™ is a Modular Product Assembly Ecosystem™ — a growing library of reusable base systems that can be selected, combined and refactored to create tailored client platforms faster than starting from zero. It is not just a collection of apps. It is the system that apps are assembled from. Built once. Learned across many systems. Assembled for each client.`;
+  }
+  if (text.includes('investor') && (text.includes('why') || text.includes('value') || text.includes('case'))) {
+    return `The investment case is not based on one product. It is based on a reusable modular architecture that can generate many sector-ready products from a controlled base-system library. As the library grows from 1 to 100 bases, each new base increases the speed and quality of every future client platform build — without proportional increases in cost or time. See the Investor section below for the full model.`;
+  }
+  if (text.includes('partner') && (text.includes('why') || text.includes('value') || text.includes('how'))) {
+    return `Partners can work with 4P3X Verse™ to shape sector-specific platforms from an existing base-system library instead of funding a complete build from zero. Strategic collaboration, pilots, white-label potential, and joint base development are all viable. See the Partner section for the full model.`;
+  }
+  if (text.includes('grant') && (text.includes('why') || text.includes('how') || text.includes('benefit'))) {
+    return `Grant funding could turn the modular base-system model into public-benefit pilots across community support, care, training, recovery, compliance and safer operational workflows. The architecture already exists — funding accelerates its application to specific social needs. Demo mode lets stakeholders review working products before any live commitment.`;
+  }
+  if (text.includes('technical') && (text.includes('why') || text.includes('impressive') || text.includes('architecture'))) {
+    return `The technical value is the repeatable architecture: SSOT config, reusable base systems, clean demo/live mode separation, component assembly, installable PWA logic, AI agent boundaries, and controlled refactoring chains. Each new base improves on the last without accumulating technical debt. See the Technical Architecture section below.`;
+  }
+  if (text.includes('hire') || text.includes('contract') || text.includes('employ') || text.includes('ciaran')) {
+    return `Ciaran / Kyzel Kreates™ demonstrates practical execution ability: architecture thinking, prompt engineering, UI/UX structure, PWA planning, state logic, demo/live separation, and product assembly. This is not just one product — it is a systematic, repeatable approach to building them. See the Contract/Hire section for the full build capability evidence.`;
+  }
+  if (text.includes('different') || text.includes('unique') || text.includes('unusual') || text.includes('distinctive')) {
+    return `While many portfolios show individual projects, the 4P3X Verse™ presents a connected product architecture: deployed demos, future variants, AI-assisted workflows, and modular base systems shown as one organised engineering ecosystem. The combination of reusable bases, AI-assisted assembly, demo/live switching, and portfolio-specific routing is a distinctive approach to early-stage software development.`;
+  }
   // Diagram-aware responses
-  if (text.includes('diagram') || text.includes('architecture') || text.includes('how does it work') || text.includes('how it works')) {
-    return `The 4P3X Verse™ has 12 architecture diagrams covering the ecosystem structure, modular base system, demo/live mode, portfolio audience routes, AI orchestration, product refactoring, future scaling, and Ciaran's systems-thinking workflow. You can view all of them on the Architecture Diagrams page — use the "Architecture Diagrams" nav link above.`;
+  if (text.includes('diagram') || text.includes('how does it work') || text.includes('how it works')) {
+    return `The 4P3X Verse™ has 12 architecture diagrams covering the ecosystem structure, modular base system, demo/live mode, portfolio audience routes, AI orchestration, product refactoring, and expansion roadmap. Use the "Architecture Diagrams" nav link above to view all 12.`;
   }
   if (text.includes('demo mode') || text.includes('live mode')) {
-    return `Demo Mode shows the full product UI and workflow so visitors can experience it immediately. Live Mode connects a real backend (Supabase, Firebase, REST API) to make it operational. The diagram "Demo Mode → Live Mode Architecture" explains this visually — find it on the Architecture Diagrams page.`;
+    return `Demo Mode shows the full product UI and workflow immediately. Live Mode connects a real backend (Supabase, Firebase, REST API) to make it operational. This means clients can review a working product demo before any live infrastructure commitment. The "Demo Mode → Live Mode Architecture" diagram explains this visually.`;
   }
-  if (text.includes('ai agent') || text.includes('intelligent ai') || text.includes('4p3x ai')) {
-    return `The 4P3X Intelligent AI™ layer works across the ecosystem as a portfolio routing agent, visitor guide, build-assist logic layer, and configuration intelligence system. The "4P3X Intelligent AI™ Agent Network" diagram explains the orchestration structure — available on the Architecture Diagrams page.`;
+  if (text.includes('scale') || text.includes('roadmap') || text.includes('expansion')) {
+    return `The 4P3X Verse™ scales from 1 reusable base (V1, live) to 5 (V2), 10 (V3), 20 (V4), 50 (V5), and 100 modular base-system libraries (V6). Each stage adds separate reusable foundations — not one app getting bigger. See the Expansion Roadmap section and the Timeline section on this page.`;
   }
-  if (text.includes('scale') || text.includes('roadmap') || text.includes('100 base') || text.includes('expansion')) {
-    return `The 4P3X Verse™ is designed to scale from 1 reusable base (V1) to 5 (V2), 10 (V3), 20 (V4), 50 (V5), and 100 modular base architectures (V6). The "Expansion Roadmap" diagram maps this visually — see the Architecture Diagrams page or the Timeline section on this page.`;
-  }
-  if (text.includes('refactor') || text.includes('refactoring')) {
-    return `The 4P3X Refactoring Engine diagram shows how one base architecture is safely refactored into multiple sector-ready product variants — investor tools, partner platforms, grant systems, and technical implementations — without rebuilding from scratch. Find it on the Architecture Diagrams page.`;
-  }
-
   // Portfolio routing
+  const portfolioList = Object.values(PORTFOLIO_ROUTES);
   const direct = portfolioList.find(p => p.routeLogic.some(term => text.includes(term)));
   if (direct) {
     return `Best route: ${direct.title}. ${direct.summary} Open it here: ${direct.url}`;
   }
   if (text.includes('all') || text.includes('five') || text.includes('portfolios')) {
-    return `This gateway has exactly five portfolio paths: Investor, Strategic Partner, Hire / Contract, Grant / Public Benefit, and Technical Architecture. Each is explained visually in the Architecture Diagrams page — particularly the "Value & Audience Map" diagram.`;
+    return `This gateway has exactly five portfolio paths: Investor, Strategic Partner, Hire / Contract, Grant / Public Benefit, and Technical Architecture. Each is explained by the Value & Audience Map diagram and the Modular Base-System Expansion section below.`;
   }
-  if (text.includes('ciaran') || text.includes('kyzel')) {
-    return `Ciaran / Kyzel Kreates™ is a rapid AI-assisted systems builder creating the 4P3X Verse™: one modular architecture that can become many sector-ready products. The "Systems Thinking & Build Process" and "Rapid Learning, Modular Thinking" diagrams explain his approach — available on the Architecture Diagrams page.`;
-  }
-  return `I am the 4P3X Portfolio Guide™. I can help you find the right portfolio (investor, partner, contract/hire, grant, or technical), explain the architecture diagrams, or answer questions about the 4P3X Verse™ ecosystem, demo/live mode, AI agents, or expansion roadmap.`;
+  return `I am the 4P3X Portfolio Guide™. I can explain the Modular Base-System Expansion Model, the client platform assembly process, the 5-to-100 base roadmap, the demo/live architecture, or route you to the right portfolio. Try asking "what is the modular base system?" or "how does 4P3X build a client platform?"`;
 }
 
 // ─── Logo with fallback ────────────────────────────────────────────────────────
@@ -303,6 +326,7 @@ function App() {
                   maxCards={3}
                 />
               </div>
+              <ModularBaseExpansion portfolioId="investor" />
 
               {/* Partner diagrams */}
               <div className="audience-diag-block">
@@ -316,6 +340,7 @@ function App() {
                   maxCards={2}
                 />
               </div>
+              <ModularBaseExpansion portfolioId="partner" />
 
               {/* Contract diagrams */}
               <div className="audience-diag-block">
@@ -329,6 +354,7 @@ function App() {
                   maxCards={2}
                 />
               </div>
+              <ModularBaseExpansion portfolioId="contract" />
 
               {/* Grant diagrams */}
               <div className="audience-diag-block">
@@ -342,6 +368,7 @@ function App() {
                   maxCards={2}
                 />
               </div>
+              <ModularBaseExpansion portfolioId="grant" />
 
               {/* Technical diagrams */}
               <div className="audience-diag-block">
@@ -355,6 +382,7 @@ function App() {
                   maxCards={3}
                 />
               </div>
+              <ModularBaseExpansion portfolioId="technical" />
 
               {/* Portfolio cards */}
               <div className="portfolioGrid">
