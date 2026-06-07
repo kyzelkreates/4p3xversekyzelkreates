@@ -11,3 +11,171 @@
 /* ── Extra responsive polish ── */
 @media(max-width:480px){.heroGrid{gap:28px}.heroPanel{padding:16px}.routeStack a{padding:10px 12px;font-size:13px}.ctaRow{flex-direction:column}.primary,.secondary{width:100%;justify-content:center}.proofStrip{flex-direction:column;gap:8px}.quizGrid{grid-template-columns:1fr}.options{grid-template-columns:1fr}}
 @media(max-width:320px){h1{font-size:36px}h2{font-size:22px}.lead{font-size:15px}}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UPGRADE STYLES — Timeline, Positioning, Modal, Polish
+   4P3X Verse™ · Powered by 4P3X Intelligent AI™ · Created by Kyzel Kreates™
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Logo image overrides ──────────────────────────────────────────────────── */
+.navBoxLogo{width:46px;height:46px;object-fit:contain;border:1px solid rgba(217,180,95,.5);background:linear-gradient(135deg,rgba(217,180,95,.2),rgba(159,107,255,.16));border-radius:16px}
+.landscapeLogoWrap{overflow:hidden;padding:10px}
+.landscapeLogoImg{width:100%;height:100%;object-fit:contain;display:block}
+.boxLogoWrap{overflow:hidden;padding:8px}
+.boxLogoImg{width:100%;height:100%;object-fit:contain;display:block}
+.logoFallback{display:grid;place-items:center;text-align:center;color:var(--gold);font-size:13px;padding:8px;width:100%;height:100%}
+
+/* ── Nav quiz button ─────────────────────────────────────────────────────── */
+.nav-quiz-btn{background:linear-gradient(135deg,var(--gold),#f3e4a6);color:#111;border:none;border-radius:999px;padding:9px 16px;font-weight:800;font-size:13px;cursor:pointer;white-space:nowrap}
+.nav-quiz-btn:hover{opacity:.9}
+
+/* ── Positioning section ─────────────────────────────────────────────────── */
+.positioningSection{padding-top:0}
+.positioning-short{font-size:17px;color:#d5d3db;max-width:760px;margin:18px 0;line-height:1.65;border-left:3px solid var(--gold);padding-left:18px}
+.quiz-nudge{font-size:14px;color:#9f9db0;margin:12px 0 0;font-style:italic}
+.positioning-card{border:1px solid rgba(217,180,95,.25);background:linear-gradient(135deg,rgba(217,180,95,.06),rgba(159,107,255,.06));border-radius:22px;padding:32px 36px;max-width:960px;margin:0 auto}
+.positioning-full{font-size:17px;color:#d5d3db;line-height:1.75;margin:14px 0 0}
+
+/* ── Portfolio card live label ────────────────────────────────────────────── */
+.pc-live-label{display:flex;align-items:center;gap:6px;color:var(--green);font-size:12px;font-weight:700;margin:0 0 4px}
+
+/* ── Portfolios quiz CTA ─────────────────────────────────────────────────── */
+.portfolios-quiz-cta{text-align:center;margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.portfolios-quiz-cta p{color:#9f9db0;font-size:15px;margin:0}
+
+/* ── Timeline section ────────────────────────────────────────────────────── */
+.timelineSection{background:rgba(255,255,255,.018)}
+.tl-intro{color:#d5d3db;font-size:17px;line-height:1.7;max-width:800px;margin-top:12px}
+.tl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px}
+.tl-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.tl-card:hover{transform:translateY(-3px);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.tl-live{border-color:rgba(93,241,164,.35)}
+.tl-live::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(93,241,164,.06),transparent 60%);pointer-events:none}
+.tl-roadmap{border-color:rgba(159,107,255,.3)}
+.tl-roadmap::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(159,107,255,.05),transparent 60%);pointer-events:none}
+.tl-top{display:flex;align-items:center;justify-content:space-between}
+.tl-version{font-size:13px;font-weight:900;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
+.tl-status{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px}
+.tl-status.live{background:rgba(93,241,164,.14);color:var(--green);border:1px solid rgba(93,241,164,.3)}
+.tl-status.roadmap{background:rgba(159,107,255,.14);color:var(--purple);border:1px solid rgba(159,107,255,.3)}
+.tl-bases{font-size:26px;font-weight:900;background:linear-gradient(90deg,var(--gold),var(--silver));-webkit-background-clip:text;color:transparent;line-height:1.1}
+.tl-label{font-size:13px;font-weight:700;color:var(--silver);text-transform:uppercase;letter-spacing:.12em}
+.tl-desc{font-size:14px;color:#c8c6d4;line-height:1.65;margin:4px 0 0}
+.tl-connector{display:none}
+.tl-closing{text-align:center;margin-top:44px;padding:32px;border:1px solid rgba(217,180,95,.2);border-radius:22px;background:rgba(217,180,95,.04)}
+.tl-closing p{font-size:20px;color:#f7f4e9;margin:0 0 20px;line-height:1.6}
+.tl-brand-line{font-size:14px;color:#9f9db0}
+.tl-quiz-cta{margin-top:4px}
+
+/* ── Quiz Modal Backdrop ──────────────────────────────────────────────────── */
+.qm-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(2,2,5,.82);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:16px;animation:qm-fade-in .18s ease}
+@keyframes qm-fade-in{from{opacity:0}to{opacity:1}}
+
+/* ── Quiz Modal Box ─────────────────────────────────────────────────────── */
+.qm-modal{background:linear-gradient(160deg,#0e0e12,#12121a);border:1px solid rgba(217,180,95,.35);border-radius:28px;box-shadow:0 0 0 1px rgba(217,180,95,.1),0 40px 120px rgba(0,0,0,.7);width:100%;max-width:640px;max-height:90vh;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;animation:qm-slide-in .22s ease}
+@keyframes qm-slide-in{from{transform:translateY(24px);opacity:0}to{transform:translateY(0);opacity:1}}
+.qm-modal:focus{outline:none}
+
+/* ── Modal Header ───────────────────────────────────────────────────────── */
+.qm-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:28px 28px 20px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(217,180,95,.07),transparent)}
+.qm-header-text{flex:1}
+.qm-eyebrow{color:var(--green) !important;margin:0 0 8px}
+.qm-header h2{font-size:clamp(18px,4vw,24px);margin:0 0 10px;line-height:1.2;background:linear-gradient(90deg,#fff,var(--gold));-webkit-background-clip:text;color:transparent}
+.qm-intro{font-size:14px;color:#b9b8c3;margin:0;line-height:1.6}
+.qm-close{background:rgba(255,255,255,.08);border:1px solid var(--line);color:white;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;flex-shrink:0;transition:background .15s}
+.qm-close:hover{background:rgba(255,255,255,.16)}
+.qm-close:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* ── Modal Body ─────────────────────────────────────────────────────────── */
+.qm-body{padding:24px 28px 28px;display:flex;flex-direction:column;gap:20px}
+
+/* ── Progress dots ──────────────────────────────────────────────────────── */
+.qm-progress{display:flex;gap:8px;align-items:center}
+.qm-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);transition:all .2s}
+.qm-dot.active{background:var(--gold);border-color:var(--gold);box-shadow:0 0 8px rgba(217,180,95,.5)}
+.qm-dot.done{background:var(--green);border-color:var(--green)}
+.qm-qcount{font-size:12px;color:#9f9db0;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+
+/* ── Question ───────────────────────────────────────────────────────────── */
+.qm-question{font-size:clamp(16px,3vw,20px);margin:0;line-height:1.35;color:#f7f4e9}
+
+/* ── Options ────────────────────────────────────────────────────────────── */
+.qm-options{display:flex;flex-direction:column;gap:10px}
+.qm-option{display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);color:white;text-align:left;cursor:pointer;transition:all .15s;font-size:14px;line-height:1.45}
+.qm-option:hover{border-color:rgba(217,180,95,.5);background:rgba(217,180,95,.08)}
+.qm-option.selected{border-color:var(--green);background:rgba(93,241,164,.1);box-shadow:0 0 0 2px rgba(93,241,164,.2)}
+.qm-option:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.qm-option-letter{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;font-weight:900;font-size:12px;flex-shrink:0;color:var(--gold)}
+.qm-option-text{flex:1}
+.qm-option-arrow{flex-shrink:0;opacity:.4;transition:opacity .15s}
+.qm-option:hover .qm-option-arrow{opacity:.9}
+
+/* ── Nav (back) ─────────────────────────────────────────────────────────── */
+.qm-nav{display:flex;justify-content:flex-start}
+.qm-back{background:transparent;border:1px solid var(--line);color:#b9b8c3;border-radius:999px;padding:8px 16px;font-size:13px;cursor:pointer;transition:all .15s}
+.qm-back:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── Result ─────────────────────────────────────────────────────────────── */
+.qm-result{display:flex;flex-direction:column;gap:16px}
+.qm-result-badge{align-self:flex-start;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;background:rgba(217,180,95,.15);border:1px solid rgba(217,180,95,.4);color:var(--gold)}
+.qm-result-badge.all{background:rgba(159,107,255,.15);border-color:rgba(159,107,255,.4);color:var(--purple)}
+.qm-result-title{font-size:clamp(20px,4vw,26px);margin:0;background:linear-gradient(90deg,#fff,var(--gold));-webkit-background-clip:text;color:transparent;line-height:1.2}
+.qm-result-desc{font-size:15px;color:#c8c6d4;line-height:1.7;margin:0}
+.qm-cta{gap:9px;font-size:15px}
+.qm-retake{background:transparent;border:none;color:#7a79a0;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;padding:0;align-self:flex-start;margin-top:4px;transition:color .15s}
+.qm-retake:hover{color:var(--silver)}
+
+/* ── All portfolios grid ─────────────────────────────────────────────────── */
+.qm-all-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.qm-all-card{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.05);color:white;font-size:13px;font-weight:700;transition:all .15s}
+.qm-all-card:hover{border-color:var(--gold);background:rgba(217,180,95,.08)}
+.qm-all-title{color:var(--silver)}
+
+/* ── Extra responsive polish ─────────────────────────────────────────────── */
+@media(max-width:1150px){
+  .tl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolioGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .heroGrid,.quizGrid{grid-template-columns:1fr}
+  .resultCard{position:static}
+}
+@media(max-width:768px){
+  .tl-grid{grid-template-columns:1fr}
+  .qm-all-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .positioning-card{padding:22px 20px}
+  .nav-quiz-btn{display:none}
+}
+@media(max-width:720px){
+  .section{padding:62px 20px}
+  .hero{min-height:auto}
+  .menuButton{display:block}
+  nav{display:none;position:absolute;top:79px;left:0;right:0;flex-direction:column;background:#08080b;padding:18px 5vw;border-bottom:1px solid var(--line)}
+  nav.open{display:flex}
+  .options,.portfolioGrid,.productGrid{grid-template-columns:1fr}
+  .chatInput{flex-direction:column}
+  h1{font-size:48px}
+  .lead{font-size:17px}
+  .nav{padding:14px 20px}
+  .brand span{display:none}
+  .qm-modal{max-height:100vh;border-radius:22px}
+  .qm-header{padding:20px 20px 16px}
+  .qm-body{padding:18px 20px 24px}
+}
+@media(max-width:480px){
+  .heroGrid{gap:28px}
+  .heroPanel{padding:16px}
+  .routeStack a{padding:10px 12px;font-size:13px}
+  .ctaRow{flex-direction:column}
+  .primary,.secondary{width:100%;justify-content:center}
+  .proofStrip{flex-direction:column;gap:8px}
+  .quizGrid{grid-template-columns:1fr}
+  .options{grid-template-columns:1fr}
+  .qm-all-grid{grid-template-columns:1fr}
+  .qm-option{padding:12px 14px}
+  .tl-bases{font-size:22px}
+}
+@media(max-width:320px){
+  h1{font-size:36px}
+  h2{font-size:22px}
+  .lead{font-size:15px}
+  .qm-header h2{font-size:16px}
+}
