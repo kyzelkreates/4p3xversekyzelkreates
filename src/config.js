@@ -222,5 +222,6 @@ export const LIVE_PRODUCTS = [
   ['Recharge Burnout Recovery', 'https://burnout-mh.vercel.app/ap3x/companion/index.html'],
   ['Four Paws Training and Enrichment Academy™', 'https://fourpawsdemo.vercel.app/ap3x/demo/index.html#deploy'],
   ['Quantum Compliance OS™', 'https://4p3xaiqc.netlify.app/'],
-  ['TrustShield OS™', 'https://4p3xaitsos.netlify.app/#/welcome']
+  ['TrustShield OS™', 'https://4p3xaitsos.netlify.app/#/welcome'],
+  ['Kyzel Clarity AI', 'https://kyzelclarityai.vercel.app/']
 ];
